@@ -1,0 +1,93 @@
+<project xmlns="http://maven.apache.org/POM/4.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.1.1 http://maven.apache.org/xsd/maven-4.1.1.xsd">
+	<modelVersion>4.1.1</modelVersion>
+	<groupId>com.wntime.gemfire</groupId>
+	<artifactId>ggc</artifactId>
+	<version>1.1.1-SNAPSHOT</version>
+	
+	<dependencies>
+		<dependency>
+			<groupId>io.pivotal.gemfire</groupId>
+			<artifactId>geode-core</artifactId>
+			<version>9.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>io.pivotal.gemfire</groupId>
+			<artifactId>geode-wan</artifactId>
+			<version>9.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>io.pivotal.gemfire</groupId>
+			<artifactId>geode-cq</artifactId>
+			<version>9.1.1</version>
+		</dependency>
+	</dependencies>
+	
+	 <repositories>
+		<repository>
+			<id>gemfire-release-repo</id>
+			<name>Pivotal GemFire Release Repository</name>
+			<url>https://commercial-repo.pivotal.io/data3/gemfire-release-repo/gemfire
+			</url>
+		</repository>
+		
+		<repository>
+			<id>repo.springsource.org.milestone</id>
+			<name>Spring Framework Milestone Repository</name>
+			<url>https://repo.springsource.org/milestone</url>
+		</repository>
+		<repository>
+			<id>repo.springsource.org.release</id>
+			<name>Spring Framework Release Repository</name>
+			<url>https://repo.springsource.org/release</url>
+		</repository>
+		<repository>
+			<id>repo.springsource.org.plugins.release</id>
+			<name>Spring Framework Dependencies Repository</name>
+			<url>http://repo.springsource.org/plugins-release</url>
+		</repository>
+
+		<repository>
+			<id>java.net-Public</id>
+			<name>Maven Java Net Snapshots and Releases</name>
+			<url>https://maven.java.net/content/groups/public/</url>
+		</repository>
+
+		<repository>
+			<id>cloudera</id>
+			<name>Cloudera Maven repository</name>
+			<url>https://repository.cloudera.com/content/repositories/releases/</url>
+			<layout>default</layout>
+		</repository>
+
+		<repository>
+			<id>repomaven2</id>
+			<name>repomaven2 repository</name>
+			<url>http://repo.maven.apache.org/maven2</url>
+			<layout>default</layout>
+		</repository>
+
+		<repository>
+			<id>central</id>
+			<name>Maven Central</name>
+			<url>http://repo1.maven.org/maven2</url>
+		</repository>
+
+	</repositories> 
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
